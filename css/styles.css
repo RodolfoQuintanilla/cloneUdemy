@@ -1,42 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-body{
-    
+body {
 }
 
-header{
-    background-color: #5022c3;
+header {
+  background-color: #5022c3;
+  color: white;
+}
+
+header p {
+  padding: 1.5rem;
+  text-align: center;
+}
+header input {
+  width: 100%;
+  height: 10px;
+}
+
+header p samp {
+  border-bottom: 1px solid white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+  padding: 10px;
+}
+
+.nav__logo {
+  width: 100px;
+  height: 50px;
+}
+
+.nav__input {
+  width: 700px;
+  height: 30px;
+}
+
+.nav__avatar {
+  width: 40px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.sectionOne {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.068);
+  padding: 15px;
+}
+
+.sectionDos {
+  padding: 1rem 12rem;
+}
+
+.article__banner {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+  background-image: url(../img/6caba229-b963-4af8-84b8-f71693be2507.jpg);
+  object-fit: cover;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.178);
+}
+
+.article__banner__text {
+  width: 450px;
+  height: auto;
+  margin: 10;
+  position: absolute;
+  top: 320px;
+  left: 250px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.356);
+}
+
+.article__banner__text h2{
+    font-size: 30px;
+}
+
+.article__banner__text p{
+    margin: 20px 0 ;
+}
+
+.article__banner__text button{
+    background-color: #000000;
     color: white;
+    padding: 10px;
 }
 
-header p{
-    padding: 1.5rem;
-    text-align: center;
-}
- header input{
-    width: 100%;
-    height: 10px;
- }
-
-header p samp{
-    border-bottom: 1px solid white;
-}
-
-nav{
+.cursos{
     display: flex;
     justify-content: space-between;
-    padding: 2%
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
 }
 
- .nav__logo{
+.cursos div{
+
+    width: 350px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    background-color: red;
    
-    width: 100px;
-    height: 50px;
+    
 }
-
