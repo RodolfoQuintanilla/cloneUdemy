@@ -30,7 +30,23 @@ function leerDatosCurso(curso) {
         cantidad: 1
     }
 
-    articulosCarritos = [...articulosCarritos, infCurso]
+    const existe = articulosCarritos.some(curso => curso.id === infCurso.id)
+
+    if (existe) {
+        const cursos = articulosCarritos.map(curso => {
+            if (curso.id === infCurso.id) {
+                curso.cantidad++;
+                return curso;
+            } else {
+                return curso;
+            }
+        });
+        articulosCarritos = [...cursos];
+    } else {
+        articulosCarritos = [...articulosCarritos, infCurso]
+    }
+
+
 
     carritoHTML(articulosCarritos);
 }
@@ -43,21 +59,18 @@ function carritoHTML(articulosCarritos) {
         const { imagen, titulo, precio, cantidad } = curso;
         const row = document.createElement('tr');
         row.innerHTML = `
-         <td>
-         ${imagen}
-         </td>
         <td>
-         ${titulo}
-         </td>
-<td>
-${precio}
-</td>
-<td>
-${cantidad}
-</td>
-
-       `;
-
+        ${imagen}
+        </td>
+        <td>
+        ${titulo}
+        </td>
+        <td>
+        ${precio}
+        </td>
+        <td>
+        ${cantidad}
+        </td>`;
         contenedorCarrito.appendChild(row);
     });
 }
